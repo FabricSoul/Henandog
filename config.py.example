@@ -1,0 +1,17 @@
+TOKEN = "your_token_here"
+
+# wait time for vote to pass in seconds
+wait_time = 60.0
+
+# timeout time in minutes
+timeout_time = 5.0
+
+# vote threshold
+vote_threshold = 5
+
+# auto reply message
+reply_message = True
+reply_member_id = []
+kill_sck = ""
+
+keywords = {}
