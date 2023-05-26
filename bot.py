@@ -5,6 +5,7 @@ import datetime
 import config
 import time
 import random
+import asyncio
 
 intents = discord.Intents.all()
 intents.message_content = True
@@ -156,21 +157,24 @@ async def on_ready():
 async def on_message(message):
     if config.reply_message and message.author != client.user:
         chance = random.randint(0,100)
-        if chance <= 10:
+        if chance <= 30:
             if message.author.id in config.reply_member_id:
-                image = discord.File(config.kill_sck)
                 print(f"reply to {message.author}")
+                await asyncio.sleep(random.randint(10, 20))
+                image = discord.File(config.kill_sck)
                 await message.reply(file=image)
         
-        if chance <= 90:
-            if any(keyword in message.content for keyword in config.keywords):
-                for keyword, reply in config.keywords.items():
-                    if keyword in message.content:
-                        if reply.startswith('./images'):
-                            image = discord.File(reply)
-                            await message.reply(file=image)
-                        else:
-                            await message.reply(reply)
+        if any(keyword in message.content for keyword in config.keywords):
+            for keyword, reply in config.keywords.items():
+                chance = random.randint(0,100)
+                if keyword in message.content and chance <= 30:
+                    print(f"reply to {message.author}, trigger {keyword}")
+                    await asyncio.sleep(random.randint(10, 30))
+                    if reply.startswith('./images'):
+                        image = discord.File(reply)
+                        await message.reply(file=image)
+                    else:
+                        await message.reply(reply)
     await client.process_commands(message)
 
 client.run(

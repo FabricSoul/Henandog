@@ -26,7 +26,7 @@ Henandog is a Discord bot that allows you to initiate votes in your server. It i
 ## Installation
 Henandog is available on this repository. You can clone it using the following command:
 ```bash
-git clone Henandog_URL
+git clone https://github.com/FabricSoul/Henandog.git
 ```
 ### Dependencies
 Henandog requires the following dependencies:
@@ -40,14 +40,14 @@ Henandog requires a configuration file to run. You can create one by copying the
 #### Docker(Recommended)
 Henandog is available for Docker. You can run it using the following command:
 ```bash
-docker build -t Henandog .
-docker run -d Henandog
+docker build -t henandog .
+docker run -d henandog
 ```
 
 #### Deploying with Docker
 ```bash
-docker build -t Henandog .
-docker run -d --restart=always Henandog
+docker build -t henandog .
+docker run -d --restart=always henandog
 ```
 
 #### Python

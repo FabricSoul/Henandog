@@ -27,7 +27,7 @@ Henandog 是一个 Discord 机器人，允许您在服务器中发起投票。�
 ## 安装
 Henandog 可在此存储库中获得。您可以使用以下命令克隆它：
 ```bash
-git clone Henandog_URL
+git clone https://github.com/FabricSoul/Henandog.git
 ```
 ### 依赖项
 Henandog 需要以下依赖项：
@@ -41,14 +41,14 @@ Henandog 需要一个配置文件才能运行。您可以通过复制 `config.py
 #### Docker（推荐）
 Henandog 可以在 Docker 中运行。您可以使用以下命令运行它：
 ```bash
-docker build -t Henandog .
-docker run -d Henandog
+docker build -t henandog .
+docker run -d henandog
 ```
 
 #### 使用 Docker 部署
 ```bash
-docker build -t Henandog .
-docker run -d --restart=always Henandog
+docker build -t henandog .
+docker run -d --restart=always henandog
 ```
 
 #### Python
