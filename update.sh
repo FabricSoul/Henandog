@@ -24,4 +24,8 @@ if [ ! -z "$OLD_IMAGE" ]; then
 fi
 
 # Run a new container with the updated image and version
+<<<<<<< HEAD
 docker run -d --restart=always --name $IMAGE_NAME $IMAGE_NAME:$NEW_VERSION
+=======
+docker run -d --restart=always --name $IMAGE_NAME "$IMAGE_NAME:$NEW_VERSION"
+>>>>>>> 550012a8067d33de14963ff0bd6fc35a5499cb8b
