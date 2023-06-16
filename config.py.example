@@ -15,3 +15,7 @@ reply_member_id = []
 kill_sck = ""
 
 keywords = {}
+
+# The configurations for using Google Search API
+GOOGLE_API_KEY = "your_google_api_key_here"
+GOOGLE_CX_ID = "your_custom_search_engine_id_here"

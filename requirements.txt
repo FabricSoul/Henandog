@@ -1,1 +1,12 @@
-discord.py==2.2.3
+discord.py
+requests
+coloredlogs
+bleach~=6.0.0
+APScheduler~=3.10.1
+EdgeGPT~=0.10.13
+aiofiles~=23.1.0
+aiohttp~=3.8.4
+certifi~=2023.5.7
+httpx~=0.24.1
+BingImageCreator~=0.4.2
+rich~=13.4.1

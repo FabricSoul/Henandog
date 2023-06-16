@@ -12,8 +12,10 @@
     - [Dependencies](#dependencies)
     - [Configuration](#configuration)
     - [Running](#running)
-      - [Docker(Recommended)](#dockerrecommended)
+      - [Docker (Recommended)](#docker-recommended)
       - [Deploying with Docker](#deploying-with-docker)
+      - [Undeploying with Docker](#undeploying-with-docker)
+      - [Updating the Docker Image](#updating-the-docker-image)
       - [Python](#python)
   - [Commands](#commands)
   - [License](#license)
@@ -35,9 +37,11 @@ Henandog requires the following dependencies:
 ### Configuration
 Henandog requires a configuration file to run. You can create one by copying the `config.py.example` file and renaming it to `config.py`. You can then edit the file to add your bot's token and the prefix you want to use.
 
+Certainly! Here's the updated portion of the README.md documentation with the bash scripts enclosed in a code snippet:
+
 ### Running
 
-#### Docker(Recommended)
+#### Docker (Recommended)
 Henandog is available for Docker. You can run it using the following command:
 ```bash
 docker build -t henandog .
@@ -45,10 +49,25 @@ docker run -d henandog
 ```
 
 #### Deploying with Docker
-```bash
-docker build -t henandog .
-docker run -d --restart=always henandog
-```
+To deploy Henandog with Docker, you can use the provided `deploy.sh` script:
+
+
+Simply execute the `deploy.sh` script to build and run the Henandog container.
+
+#### Undeploying with Docker
+To undeploy Henandog and remove the running container, you can use the provided `undeploy.sh` script:
+
+
+Execute the `undeploy.sh` script to stop and remove the running Henandog container.
+
+#### Updating the Docker Image
+If you need to update the Docker image for Henandog, you can use the provided `update.sh` script:
+
+
+Run the `update.sh` script to stop and remove the existing container, build the updated image, and run a new container with the updated image.
+
+Note: Make sure to give execute permissions to the scripts before running them using the following command: `chmod +x deploy.sh undeploy.sh update.sh`.
+
 
 #### Python
 You can also run it using Python. You can do so by running the following command:
@@ -58,10 +77,11 @@ python3 bot.py
 
 ---
 ## Commands
-| Command | Description |
-| --- | --- |
+| Command  | Description                    |
+| -------- | ------------------------------ |
 | $timeout | Sets the timeout for the vote. |
-| $kick | Kicks a user from the server. |
+| $kick    | Kicks a user from the server.  |
+| $search  | Search on Google.              |
 
 ---
 ## License
