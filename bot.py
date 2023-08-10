@@ -272,12 +272,8 @@ async def search(ctx, *, question):
 
 async def sudo(ctx, sub_command, user: discord.Member):
     """Perform an action as sudo. Can kick, timeout, ban, release timeout, or unban a user."""
-    authorized_user_id = [
-        520074734193606657,
-        1075637853024964619,
-        422548764721414144,  # Replace this with the authorized user's Discord ID
-    ]
-    if ctx.message.author.id in authorized_user_id:
+
+    if ctx.message.author.id in config.authorized_user_id:
         try:
             if sub_command == "kick":
                 await user.kick(reason="Kicked by administrator.")
